@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <!-- font style -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">   
+    <!-- icons css -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- css main -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="Bookmark section">
+        <div class="layer d-flex justify-content-center align-items-center d-none">
+            <div class="box-info bg-white p-4 shadow-lg rounded-3">
+                <header class="boxheader w-100 d-flex justify-content-between align-items-center mb-4">
+                    <div class="circles d-flex">
+                        <sapn class="rounded-circle bg-danger text-danger me-2">.....</sapn>
+                        <sapn class="rounded-circle bg-warning text-warning me-2">.....</sapn>
+                        <sapn class="rounded-circle bg-success text-success me-2">.....</sapn>
+                    </div>
+                    <button id="closeButton" class="btn border-0"><i class="fa-solid fa-xmark fs-3"></i></button>
+                </header>
+                <p class="fw-bold fs-4 mb-4">Site Name or Url is not valid, Please follow the rules below :</p>
+                <ol class="list-unstyled">
+                    <li class="lead fs-5">
+                        <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                        Site name must contain at least 3 characters
+                    </li>
+                    <li class="lead fs-5">
+                        <i class="fa-regular fa-circle-right p-2 text-danger"></i>
+                        Site URL must be a valid one
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="container">
+            <div class="bookmarkCabtion py-5">
+                <h1 class="text-capitalize">bookmarker</h1>
+            </div>
+            <div class="botderDiv"></div>
+            <div class="formProject py-5">
+                <h2 class=" text-capitalize pb-5 fs-4"><i class="fa-solid fa-bookmark"></i> bookmark your favorite sites <i  class="fa-solid fa-bookmark"></i></h2>
+                <div>
+                    <label for="bookmarkNameInput" class="pb-2 fw-bold"><i class="fa-solid fa-book-bookmark pe-2"></i>Site Name</label>
+                    <input oninput="validationName()" type="text" id="bookmarkNameInput" class="form-control mb-3" placeholder="Bookmark Name">
+                </div>
+                <div>
+                    <label for="bookmarkUrlInput" class="pb-2 fw-bold"><i class="fa-solid fa-link pe-2"></i>Site Url</label>
+                    <input oninput="validationUrl()" type="text" id="bookmarkUrlInput" class="form-control mb-4" placeholder="Bookmark Name">
+                </div>
+                <div class="text-center mb-5">
+                    <button class="btn submitBtn btn-danger px-5">Submit</button>
+                    <button class="btn ubdateBtn btn-warning px-5 d-none">Ubdate</button>
+                </div>
+                <div>
+                    <label for="searchInput" class="pb-2 fw-bold"><i class="fa-solid fa-search pe-2"></i>Search Here</label>
+                    <input oninput="searchData()" type="text" id="searchInput" class="form-control mb-4" placeholder="Search ...">
+                </div>
+            </div>
+            <div class="botderDiv mb-5"></div>
+            <div class="row">
+                <div class="col-sm-12 ">
+                    <div class="output">
+                        <table class="table text-center">
+                            <thead>
+                                <th>Index</th>
+                                <th>Website Name</th>
+                                <th>Visit</th>
+                                <th>Delete</th>
+                                <th>Ubdate</th>
+                            </thead>
+                            <tbody id="tableBody">
+                                
+                            </tbody>
+                        </table class="">
+                    </div>
+                </div>
+            </div>
+            
+    
+        </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/Main.js"></script>
+    
+</body>
+</html>
